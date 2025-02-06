@@ -3,6 +3,7 @@ import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 
 export default async function Home() {
+  
   const snippets = await prisma.snippet.findMany();
 
   if (!snippets || snippets.length === 0) {
